@@ -6,8 +6,8 @@ spring:
           brokers: localhost:9092
       bindings:
         events-in:
-          destination: event
+          destination: event1
           contentType: application/json
         events-out:
-          destination: event
+          destination: event1
           contentType: application/json

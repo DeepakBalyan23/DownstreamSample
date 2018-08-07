@@ -31,7 +31,7 @@ public class DownstreamController {
 	//@PostMapping
 	public void handle(@Payload Event event) {
 		downstreamService.saveEvent(event);
-		System.out.println(event.eventId);
+		System.out.println(event.eventId + " Downstream");
 	}
 	
 }

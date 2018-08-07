@@ -20,4 +20,9 @@ public class DownstreamServiceImpl implements DownstreamService{
 	public void saveEvent(Event event){
 		downstreamRepository.save(event);
 	}
+
+	@Override
+	public Iterable<Event> getAllEvent() {
+		return downstreamRepository.findAll();
+	}
 }
