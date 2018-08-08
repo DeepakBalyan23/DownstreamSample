@@ -1,15 +1,12 @@
-package com.stackroute.eplay.downstreamservice;
+package com.stackroute.eplay.downstreamservice.stream;
 
 import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.cloud.stream.annotation.Output;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.SubscribableChannel;
 
-public interface EventStreams {
-	String INPUT = "events-in";
-    String OUTPUT = "events-out";
+public interface RSVPEventStreams {
+	String INPUT = "RSVP-event-in";
     @Input(INPUT)
-    SubscribableChannel inboundEvents();
-    @Output(OUTPUT)
-    MessageChannel outboundEvents();
+    SubscribableChannel inboundRSVPEvent();
 }

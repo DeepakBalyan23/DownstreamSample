@@ -3,11 +3,23 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: localhost:9092
+          brokers: 172.23.238.220:9092
       bindings:
-        events-in:
-          destination: event1
+        RSVP-event-in:
+          destination: RSVPEvent
           contentType: application/json
-        events-out:
-          destination: event1
+        movie-event-in:
+          destination: MovieEvent
+          contentType: application/json
+        ticketed-event-in:
+          destination: TicketedEvent
+          contentType: application/json
+        movie-in:
+          destination: Movie
+          contentType: application/json
+        user-in:
+          destination: User
+          contentType: application/json
+        theatre-in:
+          destination: Theatre
           contentType: application/json
